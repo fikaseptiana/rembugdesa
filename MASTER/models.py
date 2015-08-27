@@ -81,3 +81,7 @@ class Dusun(models.Model):
 class DusunResource(resources.ModelResource):
     class Meta:
         model = Dusun
+
+
+        #bismilah
+        
