@@ -42,3 +42,5 @@ class DusunAdmin(ImportExportModelAdmin):
     pass
 
 admin.site.register(Dusun, DusunAdmin)
+
+#keterangan
