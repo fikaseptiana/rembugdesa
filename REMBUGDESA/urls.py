@@ -3,7 +3,7 @@ from django.contrib import admin
 from rest_framework import routers
 
 from MASTER.views import KabupatenViewSet, KecamatanViewSet, KelurahanViewSet, DusunViewSet, ProvinsiViewSet, \
-        KegiatanViewSet, AnggotaViewSet, PerlengkapanViewSet
+        KegiatanViewSet, AnggotaViewSet, PerlengkapanViewSet, JadwalViewSet
 
 admin.autodiscover()
 
@@ -15,6 +15,7 @@ router.register(r'dusuns', DusunViewSet)
 router.register(r'kegiatans', KegiatanViewSet)
 router.register(r'anggotas', AnggotaViewSet)
 router.register(r'perlengkapans', PerlengkapanViewSet)
+router.register(r'jadwals', JadwalViewSet)
 
 urlpatterns = [
     # Examples:
