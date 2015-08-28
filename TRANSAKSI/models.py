@@ -1,6 +1,10 @@
 from django.db import models
 from import_export import resources
+<<<<<<< HEAD
 from MASTER.models import KegiatanResource, AnggotaResource, DusunResource
+=======
+
+>>>>>>> a40b157b433c1d18b815faac65a4bc3103722e32
 
 
 class Jadwal(models.Model):
@@ -19,7 +23,11 @@ class Jadwal(models.Model):
     def __unicode__(self):
         return self.jeniskegiatan
 
+<<<<<<< HEAD
 class JadwalResource(resources.ModelResource):
+=======
+classJadwalResource(resources.ModelResource):
+>>>>>>> a40b157b433c1d18b815faac65a4bc3103722e32
     class Meta:
         model = Jadwal
 
