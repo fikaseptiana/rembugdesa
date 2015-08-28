@@ -4,7 +4,7 @@ from MASTER.models import resources
 
 
 class Jadwal(models.Model):
-    jeniskegiatan = ForeignKey(Kegiatan)
+    jeniskegiatan = models.ForeignKey(Kegiatan)
     tanggal = models.CharField(max_length=100)
     tempat = models.CharField(max_length=100)
     pic = models.ForeignKey(Anggota)
