@@ -3,8 +3,8 @@ from django.contrib import admin
 from rest_framework import routers
 
 from MASTER.views import KabupatenViewSet, KecamatanViewSet, KelurahanViewSet, DusunViewSet, ProvinsiViewSet, \
-        KegiatanViewSet, AnggotaViewSet, PerlengkapanViewSet,
-from TRANSAKSI.views import JadwalViewSet        
+        KegiatanViewSet, AnggotaViewSet, PerlengkapanViewSet
+from TRANSAKSI.views import JadwalViewSet
 
 admin.autodiscover()
 
