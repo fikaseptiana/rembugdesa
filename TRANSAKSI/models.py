@@ -1,6 +1,6 @@
 from django.db import models
 from import_export import resources
-from MASTER.models import resources
+from MASTER.models import KegiatanResource, AnggotaResource, DusunResource
 
 
 class Jadwal(models.Model):
@@ -17,9 +17,9 @@ class Jadwal(models.Model):
     updatetime = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return self.jadwal
+        return self.jeniskegiatan
 
-class kegiatanResource(resources.ModelResource):
+class JadwalResource(resources.ModelResource):
     class Meta:
         model = Jadwal
 
