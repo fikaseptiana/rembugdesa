@@ -4,12 +4,12 @@ from MASTER.models import resources
 
 
 class Jadwal(models.Model):
-    jeniskegiatan = ForeignKey(kegiatan)
+    jeniskegiatan = ForeignKey(Kegiatan)
     tanggal = models.CharField(max_length=100)
     tempat = models.CharField(max_length=100)
     pic = models.ForeignKey(Anggota)
     contact = models.CharField(max_length=100)
-    anggota = ForeignKey(Anggota)
+    anggota =models.ForeignKey(Anggota)
     repeateble = models.CharField(max_length=100)
     dusun = models.ForeignKey(Dusun)
 
