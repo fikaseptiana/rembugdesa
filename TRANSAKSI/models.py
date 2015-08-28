@@ -1,10 +1,10 @@
 from django.db import models
 from import_export import resources
-from MASTER.models import resources
+
 
 
 class Jadwal(models.Model):
-    jeniskegiatan = ForeignKey(Kegiatan)
+    jeniskegiatan = models.ForeignKey(Kegiatan)
     tanggal = models.CharField(max_length=100)
     tempat = models.CharField(max_length=100)
     pic = models.ForeignKey(Anggota)
@@ -19,7 +19,7 @@ class Jadwal(models.Model):
     def __unicode__(self):
         return self.jadwal
 
-class kegiatanResource(resources.ModelResource):
+classJadwalResource(resources.ModelResource):
     class Meta:
         model = Jadwal
 
