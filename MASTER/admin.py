@@ -1,7 +1,12 @@
 from django.contrib import admin
 from import_export.admin import ImportExportModelAdmin
 from .models import Kabupaten, Kecamatan, Kelurahan, KecamatanResource, KelurahanResource, KabupatenResource, Provinsi, ProvinsiResource, \
+<<<<<<< HEAD
     DusunResource, Dusun
+=======
+    DusunResource, Dusun, Peralatan, PeralatanResource
+
+>>>>>>> 58d9661c466c7b4de1d8096096fb78de7020e426
 
 class ProvinsiAdmin(ImportExportModelAdmin):
     list_display = ['nama_provinsi', 'keterangan']
@@ -41,3 +46,14 @@ class DusunAdmin(ImportExportModelAdmin):
     pass
 
 admin.site.register(Dusun, DusunAdmin)
+<<<<<<< HEAD
+=======
+
+
+class PeralatanAdmin(ImportExportModelAdmin):
+    list_display = ['nama_peralatan']
+    resource_class = PeralatanResource
+    pass
+
+admin.site.register(Peralatan, PeralatanAdmin)
+>>>>>>> 58d9661c466c7b4de1d8096096fb78de7020e426
