@@ -83,10 +83,6 @@ class Dusun(models.Model):
 class DusunResource(resources.ModelResource):
     class Meta:
         model = Dusun
-<<<<<<< HEAD
-=======
-
-
 
 class Peralatan(models.Model):
     nama_peralatan = models.CharField(max_length=100)
@@ -102,4 +98,4 @@ class Peralatan(models.Model):
 class PeralatanResource(resources.ModelResource):
     class Meta:
         model = Peralatan
->>>>>>> 58d9661c466c7b4de1d8096096fb78de7020e426
+
