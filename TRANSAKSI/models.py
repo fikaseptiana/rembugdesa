@@ -1,6 +1,6 @@
 from django.db import models
 from import_export import resources
-from MASTER import Dusun
+from MASTER.models import Dusun, Jeniskegiatan, Repeatable, Kependudukan
 
 class Kegiatan(models.Model):
     id_jensikegiatan = models.ForeignKey(Jeniskegiatan)
@@ -21,6 +21,7 @@ class Kegiatan(models.Model):
 class KegiatanResource(resources.ModelResource):
     class Meta:
         model = Kegiatan
+        
 class AnggotakegiatanResource(models.Model):
     id_kegiatan = models.ForeignKey(Kegiatan)
     id_anggota = models.ForeignKey(Kependudukan)

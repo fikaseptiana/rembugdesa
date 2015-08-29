@@ -1,7 +1,10 @@
 from django.contrib import admin
 from import_export.admin import ImportExportModelAdmin
 from .models import Kabupaten, Kecamatan, Kelurahan, KecamatanResource, KelurahanResource, KabupatenResource, Provinsi, ProvinsiResource, \
-    Anggotakegiatan, AnggotakegiatanResource, Kegiatan, KegiatanResource
+    Anggotakegiatan, AnggotakegiatanResource, Kegiatan, KegiatanResource, Jeniskegiatan, JeniskegiatanResource, Kependudukan, KependudukanResource, \
+    Repeatable, RepeatableResource
+
+
 
 class KegiatanAdmin(ImportExportModelAdmin):
     list_display = ['id_jensikegiatan', 'tanggal', 'tempat', 'id_anggota', 'contact', 'id_repeatable', 'id_dusun']
