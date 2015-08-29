@@ -2,7 +2,7 @@ __author__ = 'Pamungkas Jayuda'
 
 from rest_framework import serializers
 
-from MASTER.models import Kecamatan, Kelurahan, Kabupaten, Provinsi, Dusun, Anggotakegiatan, Peralatan
+from MASTER.models import Kecamatan, Kelurahan, Kabupaten, Provinsi, Dusun, Peralatan
 
 class ProvinsiSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -78,14 +78,6 @@ class PerlengkapanSerializer(serializers.HyperlinkedModelSerializer):
             'keterangan'
         )
 
-class AnggotakegiatanSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Anggotakegiatan
-        fields = (
-            'id_kegiatan',
-            'id_anggota',
-            'kehadiran'
-        )
 
 class Peralatan(serializers.HyperlinkedModelSerializer):
     class Meta:

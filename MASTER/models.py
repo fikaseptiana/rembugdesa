@@ -82,21 +82,7 @@ class DusunResource(resources.ModelResource):
     class Meta:
         model = Dusun
 
-class AnggotakegiatanResource(models.Model):
-    id_kegiatan = models.ForeignKey(Kegiatan)
-    id_anggota = models.ForeignKey(Kependudukan)
-    kehadiran = models.CharField(max_length=100)
 
-    createtime = models.DateTimeField(auto_now_add=True, auto_now=False)
-    updatetime = models.DateTimeField(auto_now_add=False, auto_now=True)
-
-    def __unicode__(self):
-        return self.id_anggota
-
-
-class AnggotakegiatanResource(resources.ModelResource):
-    class Meta:
-        model = Anggotakegiatan
 
 class Peralatan(models.Model):
     nama_peralatan = models.CharField(max_length=100)

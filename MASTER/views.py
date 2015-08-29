@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from MASTER.models import Kabupaten, Kecamatan ,Kelurahan, Provinsi, Dusun, Anggotakegiatan, Peralatan
+from MASTER.models import Kabupaten, Kecamatan ,Kelurahan, Provinsi, Dusun, Peralatan
 from MASTER.serializers import KecamatanSerializer, KelurahanSerializer, KabupatenSerializer, ProvinsiSerializer, \
-    DusunSerializer, AnggotakegiatanSerializer, PeralatanSerializer
+    DusunSerializer, PeralatanSerializer
 
 
 class ProvinsiViewSet(viewsets.ModelViewSet):
@@ -29,9 +29,6 @@ class DusunViewSet(viewsets.ModelViewSet):
     queryset = Dusun.objects.all()
     serializer_class = DusunSerializer
 
-class AnggotakegiatanViewSet(viewsets.ModelViewSet):
-    queryset = Anggotakegiatan.objects.all()
-    serializer_class = AnggotakegiatanSerializer
 
 class PeralatanViewSe(viewsets.ModelViewSet):
     queryset = Peralatan.objects.all()

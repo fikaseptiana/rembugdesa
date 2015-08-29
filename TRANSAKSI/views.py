@@ -9,3 +9,8 @@ from MASTER.serializers import KecamatanSerializer, KelurahanSerializer, Kabupat
 class KegiatanlViewSet(viewsets.ModelViewSet):
     queryset = Kegiatan.objects.all()
     serializer_class= KegiatanSerializer
+
+
+class AnggotakegiatanViewSet(viewsets.ModelViewSet):
+    queryset = Anggotakegiatan.objects.all()
+    serializer_class = AnggotakegiatanSerializer
