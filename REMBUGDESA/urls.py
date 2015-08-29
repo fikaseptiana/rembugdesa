@@ -2,9 +2,8 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from rest_framework import routers
 
-from MASTER.views import KabupatenViewSet, KecamatanViewSet, KelurahanViewSet, DusunViewSet, ProvinsiViewSet, \
-        KegiatanViewSet, AnggotaViewSet, PerlengkapanViewSet
-from TRANSAKSI.views import JadwalViewSet
+from MASTER.views import KabupatenViewSet, KecamatanViewSet, KelurahanViewSet, DusunViewSet, ProvinsiViewSet
+from TRANSAKSI.views import JeniskegiatanViewSet, RepeatableViewSet, PerlengkapankegiatanViewSet
 
 admin.autodiscover()
 
@@ -13,11 +12,9 @@ router.register(r'provinsis', ProvinsiViewSet)
 router.register(r'kabupatens', KabupatenViewSet)
 router.register(r'kecamatans', KecamatanViewSet)
 router.register(r'dusuns', DusunViewSet)
-router.register(r'kegiatans', KegiatanViewSet)
-router.register(r'anggotas', AnggotaViewSet)
-router.register(r'perlengkapans', PerlengkapanViewSet)
-router.register(r'jadwals', JadwalViewSet)
-
+router.register(r'jeniskegiatans', JeniskegiatanViewSet)
+router.register(r'repeatable', RepeatableViewSet)
+router.register(r'perlengkapankegiatans', PerlengkapankegiatanViewSet)
 urlpatterns = [
     # Examples:
     # url(r'^$', 'REMBUGDESA.views.home', name='home'),
