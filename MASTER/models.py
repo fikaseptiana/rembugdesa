@@ -82,54 +82,33 @@ class DusunResource(resources.ModelResource):
     class Meta:
         model = Dusun
 
-
-class Kegiatan(models.Model):
-    posyandu = models.CharField(max_length=100)
-    arisan = models.CharField(max_length=100)
-    kerjabakti = models.CharField(max_length=100)
-
-    createtime = models.DateTimeField(auto_now_add=True, auto_now=False)
-    updatetime = models.DateTimeField(auto_now_add=False, auto_now=True)
-
-    def __unicode__(self):
-        return self.posyandu
-
-
-class KegiatanResource(resources.ModelResource):
-    class Meta:
-        model = Kegiatan
-
-
-class Anggota(models.Model):
-    id_anggota = models.CharField(max_length=100)
-    nama_anggota = models.CharField(max_length=100)
-    hadir = models.CharField(max_length=100)
-    keterangan = models.CharField(max_length=500)
+class AnggotakegiatanResource(models.Model):
+    id_kegiatan = models.ForeignKey(Kegiatan)
+    id_anggota = models.ForeignKey(Kependudukan)
+    kehadiran = models.CharField(max_length=100)
 
     createtime = models.DateTimeField(auto_now_add=True, auto_now=False)
     updatetime = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return self.nama_anggota
+        return self.id_anggota
 
 
-class AnggotaResource(resources.ModelResource):
+class AnggotakegiatanResource(resources.ModelResource):
     class Meta:
-        model = Anggota
+        model = Anggotakegiatan
 
-class Perlengkapan(models.Model):
-    pic = models.ForeignKey(Anggota)
-    item = models.CharField(max_length=100)
-    qty = models.CharField(max_length=100)
-    keterangan = models.CharField(max_length=500)
+class Peralatan(models.Model):
+    nama_peralatan = models.CharField(max_length=100)
+
 
     createtime = models.DateTimeField(auto_now_add=True, auto_now=False)
     updatetime = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return self.item
+        return self.nama_peralatan
 
 
-class PerlengkapanResource(resources.ModelResource):
+class PeralatanResource(resources.ModelResource):
     class Meta:
-        model = Perlengkapan
+        model = Peralatan
